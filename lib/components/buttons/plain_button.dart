@@ -22,7 +22,7 @@ class _PlainButtonState extends State<PlainButton> {
         onPressed: changeTitle,
         style: TextButton.styleFrom(minimumSize: const Size.fromHeight(50)),
         child: const Text(
-          "Inicial",
+          "Mudar",
           style: TextStyle(color: Colors.white),
         ));
   }
