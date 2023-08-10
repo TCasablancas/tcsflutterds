@@ -18,12 +18,16 @@ class _PlainButtonState extends State<PlainButton> {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-        onPressed: changeTitle,
-        style: TextButton.styleFrom(minimumSize: const Size.fromHeight(50)),
-        child: const Text(
-          "Mudar",
-          style: TextStyle(color: Colors.white),
-        ));
+    return SizedBox(
+      width: double.infinity,
+      height: 50,
+      child: TextButton(
+          onPressed: changeTitle,
+          style: TextButton.styleFrom(backgroundColor: Colors.blue),
+          child: const Text(
+            "Mudar",
+            style: TextStyle(color: Colors.white),
+          )),
+    );
   }
 }
