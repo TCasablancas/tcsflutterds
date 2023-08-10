@@ -7,7 +7,7 @@ class PlainButton extends StatefulWidget {
   final void buttonTap;
 
   const PlainButton({
-    required Key key,
+    Key? key,
     required this.title,
     required this.buttonTap,
   }) : super(key: key);
