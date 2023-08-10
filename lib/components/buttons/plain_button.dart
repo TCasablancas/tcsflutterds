@@ -1,3 +1,5 @@
+library plain_button;
+
 import 'package:flutter/material.dart';
 
 class PlainButton extends StatefulWidget {

@@ -1,7 +1,7 @@
 name: tcsflutterds
-description: A new Flutter package project.
+description: A flutter Design System package by Thyago Casablancas, for own projects.
 version: 0.0.1
-homepage:
+homepage: 
 
 environment:
   sdk: '>=3.0.6 <4.0.0'
@@ -15,11 +15,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
-
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter packages.
+  
 flutter:
 
   # To add assets to your package, add an assets section, like this:
