@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class PlainButton extends StatefulWidget {
   final String title;
-  final void buttonTap;
+  final Function buttonTap;
 
   const PlainButton({
     Key? key,
