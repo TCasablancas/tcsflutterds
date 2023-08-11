@@ -5,11 +5,13 @@ import 'package:flutter/material.dart';
 class PlainButton extends StatefulWidget {
   final String title;
   final Function buttonTap;
+  final bool hasPadding;
 
-  const PlainButton({
+  PlainButton({
     Key? key,
     required this.title,
     required this.buttonTap,
+    required this.hasPadding,
   }) : super(key: key);
 
   @override
@@ -19,7 +21,9 @@ class PlainButton extends StatefulWidget {
 class _PlainButtonState extends State<PlainButton> {
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      padding: widget.hasPadding ? const EdgeInsets.all(16) : const EdgeInsets.all(0), 
+      child: SizedBox(
         width: double.infinity,
         height: 50,
         child: ElevatedButton(
@@ -36,5 +40,6 @@ class _PlainButtonState extends State<PlainButton> {
             style: const TextStyle(color: Colors.white),
           ),
         ));
+      );
   }
 }
