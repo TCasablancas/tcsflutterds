@@ -45,7 +45,8 @@ class _PlainButtonState extends State<PlainButton> {
               },
               child: Text(
                 widget.title,
-                style: const TextStyle(color: Colors.white),
+                style: const TextStyle(
+                    color: Colors.white, fontFamily: 'Poppins-Black'),
               ),
             )));
   }
