@@ -3,10 +3,12 @@ import 'package:tcsflutterds/components/labels/app_bar_label.dart';
 
 class MainAppBar extends StatefulWidget {
   final String title;
+  final Function notificationAction;
 
   const MainAppBar({
     Key? key,
     required this.title,
+    required this.notificationAction,
   }) : super(key: key);
 
   @override
@@ -24,10 +26,10 @@ class _MainAppBar extends State<MainAppBar> {
         Padding(
           padding: const EdgeInsets.only(right: 20),
           child: GestureDetector(
-            onTap: () {},
+            onTap: () => widget.notificationAction,
             child: const Icon(
-              Icons.notifications,
-              size: 26.0,
+              Icons.notifications_outlined,
+              size: 28.0,
             ),
           ),
         ),
