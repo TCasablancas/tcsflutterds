@@ -26,7 +26,7 @@ class _MainAppBar extends State<MainAppBar> {
           child: GestureDetector(
             onTap: () {},
             child: const Icon(
-              Icons.search,
+              Icons.notifications,
               size: 26.0,
             ),
           ),
