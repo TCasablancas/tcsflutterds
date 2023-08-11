@@ -3,12 +3,18 @@ import 'package:tcsflutterds/components/labels/app_bar_label.dart';
 
 class MainAppBar extends StatefulWidget {
   final String title;
-  final Function notificationAction;
+  final Icon? rightIcon;
+  final Icon? leadingIcon;
+  final Function? rightAction;
+  final Function? leadingAction;
 
   const MainAppBar({
     Key? key,
     required this.title,
-    required this.notificationAction,
+    this.rightAction,
+    this.rightIcon,
+    this.leadingIcon,
+    this.leadingAction,
   }) : super(key: key);
 
   @override
@@ -21,16 +27,20 @@ class _MainAppBar extends State<MainAppBar> {
     return AppBar(
       foregroundColor: Colors.black,
       centerTitle: false,
-      title: AppBarLabel(title: widget.title),
+      title: Padding(
+        padding: const EdgeInsets.only(left: 20),
+        child: AppBarLabel(title: widget.title),
+      ),
+      leading: GestureDetector(
+        onTap: () => widget.leadingAction,
+        child: widget.leadingIcon,
+      ),
       actions: <Widget>[
         Padding(
           padding: const EdgeInsets.only(right: 20),
           child: GestureDetector(
-            onTap: () => widget.notificationAction,
-            child: const Icon(
-              Icons.notifications_outlined,
-              size: 28.0,
-            ),
+            onTap: () => widget.rightAction,
+            child: widget.rightIcon,
           ),
         ),
       ],
