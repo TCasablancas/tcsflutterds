@@ -6,12 +6,14 @@ class PlainButton extends StatefulWidget {
   final String title;
   final Function buttonTap;
   final bool hasPadding;
+  final bool isActive;
 
-  PlainButton({
+  const PlainButton({
     Key? key,
     required this.title,
     required this.buttonTap,
     required this.hasPadding,
+    required this.isActive,
   }) : super(key: key);
 
   @override
@@ -19,6 +21,10 @@ class PlainButton extends StatefulWidget {
 }
 
 class _PlainButtonState extends State<PlainButton> {
+  var activeColor = MaterialStateProperty.all<Color>(Colors.blueAccent);
+  var unactiveColor = MaterialStateProperty.all<Color>(
+      const Color.fromARGB(221, 138, 138, 138));
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,10 +38,10 @@ class _PlainButtonState extends State<PlainButton> {
               style: ButtonStyle(
                 shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5))),
-                backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                backgroundColor: widget.isActive ? activeColor : unactiveColor,
               ),
               onPressed: () {
-                widget.buttonTap;
+                widget.isActive ? widget.buttonTap : null;
               },
               child: Text(
                 widget.title,
