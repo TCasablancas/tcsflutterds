@@ -16,7 +16,7 @@ class AppBarLabel extends StatelessWidget {
       style: TextStyle(
         fontFamily: GoogleFonts.poppins().fontFamily,
         fontWeight: FontWeight.w700,
-        fontSize: 28,
+        fontSize: 26,
       ),
     );
   }
