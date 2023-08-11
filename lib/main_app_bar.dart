@@ -27,10 +27,7 @@ class _MainAppBar extends State<MainAppBar> {
     return AppBar(
       foregroundColor: Colors.black,
       centerTitle: false,
-      title: Padding(
-        padding: const EdgeInsets.only(left: 20),
-        child: AppBarLabel(title: widget.title),
-      ),
+      title: AppBarLabel(title: widget.title),
       leading: GestureDetector(
         onTap: () => widget.leadingAction,
         child: widget.leadingIcon,
