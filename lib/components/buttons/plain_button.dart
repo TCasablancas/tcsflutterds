@@ -22,24 +22,25 @@ class _PlainButtonState extends State<PlainButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: widget.hasPadding ? const EdgeInsets.all(16) : const EdgeInsets.all(0), 
-      child: SizedBox(
-        width: double.infinity,
-        height: 50,
-        child: ElevatedButton(
-          style: ButtonStyle(
-            shape: MaterialStatePropertyAll(
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(5))),
-            backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
-          ),
-          onPressed: () {
-            widget.buttonTap;
-          },
-          child: Text(
-            widget.title,
-            style: const TextStyle(color: Colors.white),
-          ),
-        ));
-      );
+        padding: widget.hasPadding
+            ? const EdgeInsets.all(16)
+            : const EdgeInsets.all(0),
+        child: SizedBox(
+            width: double.infinity,
+            height: 50,
+            child: ElevatedButton(
+              style: ButtonStyle(
+                shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5))),
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+              ),
+              onPressed: () {
+                widget.buttonTap;
+              },
+              child: Text(
+                widget.title,
+                style: const TextStyle(color: Colors.white),
+              ),
+            )));
   }
 }
